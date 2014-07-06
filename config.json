@@ -1,4 +1,4 @@
 {
 	"publicPathToProxy": "http://localhost:2000/nxtbutton.php",
-	"nxtNRS": "http://80.240.140.7:6886/"
+	"nxtNRS": "http://localhost:7886/"
 }

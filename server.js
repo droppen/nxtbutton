@@ -7,7 +7,10 @@ var request = require('request');
 var config = require('./config.json');
 
 var app = express();
-app.use(bodyParser());
+app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 app.get('/nxtbutton.php', function(req, res){
 	var url = req.url.split('nxtbutton.php');

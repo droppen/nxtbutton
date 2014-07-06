@@ -5,21 +5,35 @@ usage:
 
 <head>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<script type="text/javascript" src="http://localhost:80/nxtbutton.php?includeJsFile=true"></script>
+<script type="text/javascript" src="crypto_browser.js"></script>
+<script type="text/javascript" src="nxtbutton.js"></script>
 <script>
-	// A $( document ).ready() block.
 	$( document ).ready(function() {
 		$('nxt_button').nxtButton({
-			'address' : 'FIM-XSWR-RK57-AE2P-A6U2H',
+			'recipient' : 'NXT-XSWR-RK57-AE2P-A6U2H',
+			'server'  : 'http://nxt.sx:2000/nxtbutton.php',
 			'fee'     : '1.0',
 			'amount'  : '5.0',
-			'title'   : 'Example payment'});
+			'title'   : 'Example payment',
+			'success' : function (hash, transaction) {
+				console.log('Transaction1 is complete, transaction id '+transaction);
+			}});
+		$('nxt_button2').nxtButton({
+			'recipient' : 'NXT-XSWR-RK57-AE2P-A6U2H',
+			'server'  : 'http://nxt.sx:2000/nxtbutton.php',
+			'fee'     : '1.0',
+			'amount'  : '6.0',
+			'title'   : 'Payment2',
+			'success' : function (hash, transaction) {
+				console.log('Transaction2 is complete, transaction id '+transaction);
+			}});
 	});
 
 	</script>
 	</head>
 	<body>
 	<div id='nxt_button'></div>
+	<div id='nxt_button2'></div>
 </body>
 
 If you want to use your own proxy server for NXT requests, here is the installation instructions:
