@@ -2,11 +2,10 @@ This is a public open source project, NxtButton, funded by NXT community, and th
 Copyleft by konsta gogoljuk, konsta.gogoljuk@gmail.com
 
 usage:
-
+```html
 <head>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<script type="text/javascript" src="crypto_browser.js"></script>
-<script type="text/javascript" src="nxtbutton.js"></script>
+<script type="text/javascript" src="http://nxt.sx:80/nxtbutton/code/nxtbutton.php?includeJsFile=true"></script>
 <script>
 	$( document ).ready(function() {
 		$('nxt_button').nxtButton({
@@ -35,6 +34,7 @@ usage:
 	<div id='nxt_button'></div>
 	<div id='nxt_button2'></div>
 </body>
+```
 
 If you want to use your own proxy server for NXT requests, here is the installation instructions:
 
