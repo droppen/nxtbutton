@@ -41,8 +41,8 @@ If you want to use your own proxy server for NXT requests, here is the installat
 first configure your config.json to fit your server.
 
 Nodejs:
-npm install
-node server.js
+- npm install
+- node server.js
 
 PHP:
 - please have these 4 files in same folder: nxtbutton.php, config.json, crypto_browser.js nxtbutton.js

@@ -7,7 +7,6 @@ var request = require('request');
 var config = require('./config.json');
 
 var app = express();
-app.use(bodyParser.urlencoded());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
